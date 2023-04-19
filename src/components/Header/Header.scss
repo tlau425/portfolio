@@ -1,0 +1,25 @@
+header {
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+    &__list{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__item:hover{
+        background-color: hwb(205 29% 4%);
+        color: white;
+        border-radius: 8px;
+        padding: .2rem;
+        transition: .3s;
+    }
+}

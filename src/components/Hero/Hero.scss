@@ -1,0 +1,29 @@
+@use '../../styles/partials/mixins' as *;
+
+.hero {
+    background-color: #c4c0c0;
+    display: flex;
+    justify-content: center;
+
+    &__container{
+        width: 80%;
+        display: flex;
+        height: 60vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+
+    &__avatar{
+        height: 12rem;
+        width: 12rem;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
