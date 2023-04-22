@@ -1,0 +1,24 @@
+.stack{
+    background: lightseagreen;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 0;
+    align-items: baseline;
+
+    &__icon{
+        height: 5rem;
+        width: 5rem;
+        object-fit: contain;
+    }
+
+    &__icon:hover{
+        transform: translateY(-10px);
+        transition-duration: .5s;
+    }
+
+    &__icon:nth-child(odd) {
+        padding-bottom: 3rem;
+    }
+}
