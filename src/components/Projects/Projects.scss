@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    overflow-x: hidden;
+}
+
+
+.projects{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    &__container{
+        position: relative;
+        height: 500px;
+        width: 430px;
+        margin-bottom: 20px;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+
+}
+
+.projects__container label{
+    position: relative;
+    width: 430px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.project-card{
+    position: relative;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 30px 35px;
+
+    &__image{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__picture{
+        border-radius: 5px;
+        box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+        margin-top: 23px;
+        width: 86%;
+        height: 220px;
+        object-fit: cover;
+        transition: all .7s;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+
+
+#proj1:checked-.projects__container #slide2,
+#proj2:checked-.projects__container #slide3,
+#proj3:checked-.projects__container #slide1{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #fad00c;
+    --current-color2: #404457;
+}
+
+#proj1:checked-.projects__container #slide3,
+#proj2:checked-.projects__container #slide1,
+#proj3:checked-.projects__container #slide2{
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #eceaed;
+    --current-color2: #234459;
+}
+
+#proj1:checked-.projects__container #slide1,
+#proj2:checked-.projects__container #slide2,
+#proj3:checked-.projects__container #slide3{
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 45%);
+    transform: translate3d(0, 0, 0);
+    --current-color1: hsl(280, 13%, 60%);
+    --current-color2: #ac42e1;
+}
