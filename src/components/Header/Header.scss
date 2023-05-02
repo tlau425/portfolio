@@ -1,22 +1,32 @@
+@use '../../styles/partials/mixins' as *;
+
 header {
-    background-color: skyblue;
     display: flex;
     justify-content: center;
+    padding: 1rem 0;
+}
+
+header li {
+    list-style: none;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 90%;
+
+    @include tablet{
+        width: 80%;
+    }
 
     &__list{
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     &__item:hover{
-        background-color: hwb(205 29% 4%);
+        background-color: #EB5E28;
         color: white;
         border-radius: 8px;
         padding: .2rem;
