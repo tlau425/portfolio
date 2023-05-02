@@ -30,7 +30,7 @@ body{
 }
 
 .projects__container label{
-    position: relative;
+    position: absolute;
     width: 430px;
     left: 0;
     right: 0;
@@ -69,27 +69,27 @@ body{
 
 
 
-#proj1:checked-.projects__container #slide2,
-#proj2:checked-.projects__container #slide3,
-#proj3:checked-.projects__container #slide1{
+#proj1:checked~.projects__container #slide2,
+#proj2:checked~.projects__container #slide3,
+#proj3:checked~.projects__container #slide1{
     box-shadow: 0 15px 30px rgba(0, 0, 0, 45%);
     transform: translate3d(-70%, 0, -220px);
     --current-color1: #fad00c;
     --current-color2: #404457;
 }
 
-#proj1:checked-.projects__container #slide3,
-#proj2:checked-.projects__container #slide1,
-#proj3:checked-.projects__container #slide2{
+#proj1:checked~.projects__container #slide3,
+#proj2:checked~.projects__container #slide1,
+#proj3:checked~.projects__container #slide2{
     box-shadow: 0 20px 40px rgba(0, 0, 0, 45%);
     transform: translate3d(-70%, 0, -220px);
     --current-color1: #eceaed;
     --current-color2: #234459;
 }
 
-#proj1:checked-.projects__container #slide1,
-#proj2:checked-.projects__container #slide2,
-#proj3:checked-.projects__container #slide3{
+#proj1:checked~.projects__container #slide1,
+#proj2:checked~.projects__container #slide2,
+#proj3:checked~.projects__container #slide3{
     box-shadow: 0 25px 50px rgba(0, 0, 0, 45%);
     transform: translate3d(0, 0, 0);
     --current-color1: hsl(280, 13%, 60%);
