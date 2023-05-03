@@ -11,20 +11,20 @@ import ReduxIcon from '../../assets/images/redux.png';
 import TypescriptIcon from '../../assets/images/typescript.svg';
 import './Stack.scss';
 
-function Stack () {
+function Stack() {
     return (
         <section className="stack">
-            <img className="stack__icon" src={CssIcon} alt="CSS"/>
-            <img className="stack__icon" src={HtmlIcon} alt="HTML"/>
-            <img className="stack__icon" src={JavascriptIcon} alt="Javascript"/>
-            <img className="stack__icon" src={ReactIcon} alt="React"/>
-            <img className="stack__icon" src={NodeIcon} alt="React"/>
-            <img className="stack__icon" src={ExpressIcon} alt="NodeExpress"/>
-            <img className="stack__icon" src={MysqlIcon} alt="MySQL"/>
-            <img className="stack__icon" src={PostgresIcon} alt="Postgres"/>
-            <img className="stack__icon" src={RailsIcon} alt="Rails"/>
-            <img className="stack__icon" src={TypescriptIcon} alt="Typescript"/>
-            <img className="stack__icon" src={ReduxIcon} alt="Redux"/>
+            <div className="stack__container"><img className="stack__icon" src={CssIcon} alt="CSS" /></div>
+            <div className="stack__container"><img className="stack__icon" src={HtmlIcon} alt="HTML" /></div>
+            <div className="stack__container"><img className="stack__icon" src={JavascriptIcon} alt="Javascript" /></div>
+            <div className="stack__container"><img className="stack__icon" src={ReactIcon} alt="React" /></div>
+            <div className="stack__container"><img className="stack__icon" src={NodeIcon} alt="React" /></div>
+            <div className="stack__container"><img className="stack__icon" src={ExpressIcon} alt="NodeExpress" /></div>
+            <div className="stack__container"><img className="stack__icon" src={MysqlIcon} alt="MySQL" /></div>
+            <div className="stack__container"><img className="stack__icon" src={PostgresIcon} alt="Postgres" /></div>
+            <div className="stack__container"><img className="stack__icon" src={RailsIcon} alt="Rails" /></div>
+            <div className="stack__container"><img className="stack__icon" src={TypescriptIcon} alt="Typescript" /></div>
+            <div className="stack__container"><img className="stack__icon" src={ReduxIcon} alt="Redux" /></div>
         </section>
     )
 }
