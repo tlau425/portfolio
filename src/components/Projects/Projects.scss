@@ -1,6 +1,9 @@
 @use "../../styles/partials/mixins" as *;
 @use '../../styles/partials/variables' as *;
 
+*{
+    box-sizing: border-box;
+}
 .projects{
     padding: 3rem 0;
     display: flex;
@@ -10,14 +13,14 @@
     width: 90%;
 
     @include tablet{
-        width: 60%;
+        width: 80%;
 
     }
 
     &__container{
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
     }
 }
 
@@ -28,11 +31,15 @@
 
     @include tablet{
         flex-direction: row;
+        gap: 2rem;
     }
 
     &__image{
         display: flex;
-        justify-content: center;
+
+        @include tablet{
+            align-items: flex-start;
+        }
     }
 
     &__icon{
@@ -48,12 +55,21 @@
         display: flex;
     }
 
-    &__image, &__infos{
+    &__image{
+        flex:1
+    } 
+    &__infos{
         flex: 1;
     }
 
     &__picture{
-        height: 10rem;
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+        @include tablet{
+
+        }
     }
 
     &__bullet{
@@ -69,13 +85,10 @@
         padding: .5rem 0;
     }
 
-    &__title-container{
-        align-self: flex-start;
-    }
-
     &__links{
         display: flex;
         gap: .5rem;
+        padding-top: .5rem;
     }
 
     &__link{
@@ -99,8 +112,9 @@
     }
 }
 
-.section-title{
-    color:#EB5E28;
-    font-size: 3rem;
-    box-shadow: 0px 30px 1px -25px #CCC5B9;
+
+video{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
