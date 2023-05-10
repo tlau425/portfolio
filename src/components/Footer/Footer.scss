@@ -1,0 +1,8 @@
+@use '../../styles/partials/variables.scss' as *;
+
+footer{
+    border-top: 1px solid $text-color;
+    padding: 2rem 0;
+    color: $text-color;
+    text-align: center;
+}

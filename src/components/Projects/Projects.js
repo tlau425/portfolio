@@ -1,13 +1,16 @@
 import FavIcon from "../../assets/images/favicon.ico";
 import ReactIcon from "../../assets/images/react.png";
 import GithubIcon from "../../assets/images/github.png";
+import WhichWayGif from "../../assets/images/whichway-gif.gif";
+import HackathonVid from "../../assets/images/hackathon.mp4";
 import "./Projects.scss";
 
 function Projects() {
   return (
     <section className="projects" id="projects">
-      <div className="project-card__title-container">
-        <h2 className="section-title">Projects.</h2>
+      <div className="section-title__container">
+      <h3 className="section-title__sub">My developed</h3>
+      <h2 className="section-title">Projects.</h2>
       </div>
       <div className="projects__container">
         <label for="proj1" id="slide1">
@@ -43,11 +46,17 @@ function Projects() {
                 </li>
               </ul>
               <div className="project-card__links">
-                <a className="project-card__link" href="https://github.com/tlau425/meal-buddy-client">
-                    GitHub
+                <a
+                  className="project-card__link"
+                  href="https://github.com/tlau425/meal-buddy-client"
+                >
+                  GitHub
                 </a>
-                <a className="project-card__link" href="https://github.com/tlau425/meal-buddy-client">
-                    Live
+                <a
+                  className="project-card__link"
+                  href="https://github.com/tlau425/meal-buddy-client"
+                >
+                  Live
                 </a>
               </div>
             </div>
@@ -57,7 +66,13 @@ function Projects() {
         <label for="proj2" id="slide2">
           <div className="project-card">
             <div className="project-card__image">
-              <img className="project-card__picture" src={ReactIcon} />
+              <video
+                controls
+                src={HackathonVid}
+                type="video/mp4"
+                width="600"
+                height="700"
+              ></video>
             </div>
 
             <div className="project-card__infos">
@@ -82,6 +97,14 @@ function Projects() {
                   zip code.
                 </li>
               </ul>
+              <div className="project-card__links">
+                <a
+                  className="project-card__link"
+                  href="https://github.com/davonbl-bl/industry-project-client"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </label>
@@ -89,7 +112,7 @@ function Projects() {
         <label for="proj3" id="slide3">
           <div className="project-card">
             <div className="project-card__image">
-              <img className="project-card__picture" src="" />
+              <img className="project-card__picture" src={WhichWayGif} />
             </div>
 
             <div className="project-card__infos">
@@ -113,6 +136,14 @@ function Projects() {
                   require you to input the opposite arrow key shown.
                 </li>
               </ul>
+              <div className="project-card__links">
+                <a
+                  className="project-card__link"
+                  href="https://github.com/FillanL/Which_way-frontend"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </label>
