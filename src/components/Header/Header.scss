@@ -1,9 +1,21 @@
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
-header {
+.header {
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    position: sticky;
+    top: 0px;
+    height: 6rem;
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    border-bottom: 1px solid $sub-bold;
+    z-index: 6;
+    background-color: $background-color;
+}
+.header.hide {
+    top: -6rem;
 }
 
 header li {
@@ -18,6 +30,10 @@ header li {
 
     @include tablet{
         width: 80%;
+    }
+
+    a{
+        font-size: 1.5rem;
     }
 
     &__list{
