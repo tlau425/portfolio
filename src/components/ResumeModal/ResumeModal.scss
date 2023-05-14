@@ -1,0 +1,49 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.resume {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      max-height: 96vh;
+    }
+  }
+
+  &__button {
+    width: 6rem;
+    height: 3rem;
+    align-self: flex-end;
+    background-color: white;
+    color: $bold-color;
+    background-color: $bold-color;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $bold-color;
+    }
+  }
+
+  &__pdf {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  //   &__image {
+  //     object-fit: cover;
+  //     width: 100%;
+  //     @include tablet {
+  //       width: 100%;
+  //     }
+  //   }
+}

@@ -1,0 +1,120 @@
+@use "../../styles/partials/mixins" as *;
+@use '../../styles/partials/variables' as *;
+
+*{
+    box-sizing: border-box;
+}
+.projects{
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+
+    @include tablet{
+        width: 80%;
+
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.project-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    &__image{
+        display: flex;
+
+        @include tablet{
+            align-items: flex-start;
+        }
+    }
+
+    &__icon{
+        height: 3rem;
+    }
+    
+    &__title{
+        color: $bold-color;
+        font-size: 1.5rem;
+    }
+
+    &__links{
+        display: flex;
+    }
+
+    &__image{
+        flex:1
+    } 
+    &__infos{
+        flex: 1;
+    }
+
+    &__picture{
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: contain;
+        @include tablet{
+
+        }
+    }
+
+    &__bullet{
+        line-height: 1.5rem;
+        color: #CCC5B9;
+    }
+
+    &__description{
+        line-height: 1.5rem;
+        color: #FFFCF2;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: .5rem 0;
+    }
+
+    &__links{
+        display: flex;
+        gap: .5rem;
+        padding-top: .5rem;
+    }
+
+    &__link{
+        background-color: $bold-color;
+        padding: .2rem;
+        border-radius: 8px;
+        width: 5rem;
+        text-align: center;
+
+
+        &:hover{
+            color: $bold-color;
+            background-color: white;
+            transition: .5s;
+
+        }
+    }
+
+    ul{
+        padding-left: 1rem;
+    }
+}
+
+
+video{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
