@@ -11,7 +11,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
     border-bottom: 1px solid $sub-bold;
-    z-index: 6;
+    z-index: 3;
     background-color: $background-color;
 }
 .header.hide {
@@ -20,6 +20,8 @@
 
 header li {
     list-style: none;
+    display: flex;
+
 }
 
 .nav {
@@ -32,10 +34,6 @@ header li {
         width: 80%;
     }
 
-    a{
-        font-size: 1.5rem;
-    }
-
     &__list{
         display: flex;
         gap: 2rem;
@@ -45,8 +43,9 @@ header li {
         background-color: #EB5E28;
         color: white;
         border-radius: 8px;
-        padding: .2rem 1rem;
         transition: .3s;
+        font-size: 1.5rem;
+        padding: .3rem .5rem;
 
         &:hover{
             background-color: white;
