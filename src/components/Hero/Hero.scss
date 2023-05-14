@@ -64,7 +64,7 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     transition: all 1s ease-in-out;
     width: 400px;
-    z-index: 5;
+    z-index: 2;
 
     @include tablet{
         background-position: 0 -100px;
