@@ -55,12 +55,9 @@
         display: flex;
     }
 
-    &__image{
+    &__image, &__infos{
         flex:1
     } 
-    &__infos{
-        flex: 1;
-    }
 
     &__picture{
         display: block;
@@ -75,6 +72,14 @@
     &__bullet{
         line-height: 1.5rem;
         color: #CCC5B9;
+        opacity: 0;
+        animation: reveal 0.5s forwards;
+        animation-delay: 0.5s;
+
+        @keyframes reveal {
+            from { transofmr: translateY(20px);}
+            to{ opacity: 1; transform: none;}
+        }
     }
 
     &__description{

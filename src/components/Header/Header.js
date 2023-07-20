@@ -47,36 +47,42 @@ function Header() {
       >
         <nav className="nav">
           <div className="nav__top-container">
-            <a href="#" className="nav__logo">Tommy Lau</a>
+            <a href="#" className="nav__logo">
+              Tommy Lau
+            </a>
             <div className="hamburger" onClick={handleHamburgerClick}>
               <div id={toggleHamburger ? "checked" : ""}></div>
             </div>
           </div>
-            <ul className={toggleHamburger? "nav__list": "nav__list nav__list--toggled"}>
-              <li className="nav__li">
-                <a href="#projects" className="nav__item">
-                  Projects
-                </a>
-              </li>
-              <li className="nav__li">
-                <a href="#about" className="nav__item">
-                  About
-                </a>
-              </li>
-              <li className="nav__li">
-                <a href="#contact" className="nav__item">
-                  Contact
-                </a>
-              </li>
-              <li className="nav__li">
-                <button
-                  className="nav__item nav__button"
-                  onClick={handleResumeClick}
-                >
-                  Resume
-                </button>
-              </li>
-            </ul>
+          <ul
+            className={
+              toggleHamburger ? "nav__list" : "nav__list nav__list--toggled"
+            }
+          >
+            <li className="nav__li">
+              <a href="#projects" className="nav__item">
+                Projects
+              </a>
+            </li>
+            <li className="nav__li">
+              <a href="#about" className="nav__item">
+                About
+              </a>
+            </li>
+            <li className="nav__li">
+              <a href="#contact" className="nav__item">
+                Contact
+              </a>
+            </li>
+            <li className="nav__li">
+              <button
+                className="nav__item nav__button"
+                onClick={handleResumeClick}
+              >
+                Resume
+              </button>
+            </li>
+          </ul>
         </nav>
       </header>
     </>
