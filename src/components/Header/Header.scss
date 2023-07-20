@@ -1,55 +1,141 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .header {
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  border-bottom: 1px solid $sub-bold;
+  z-index: 3;
+  background-color: $background-color;
+
+  @include tablet{
     height: 6rem;
-    transition-property: all; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 200ms;
-    border-bottom: 1px solid $sub-bold;
-    z-index: 3;
-    background-color: $background-color;
+  }
 }
 .header.hide {
-    top: -6rem;
+  top: -6rem;
 }
 
 header li {
-    list-style: none;
-    display: flex;
-
+  list-style: none;
+  display: flex;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+
+  @include tablet {
+    flex-direction: row;
+    width: 80%;
     align-items: center;
-    width: 90%;
+  }
 
-    @include tablet{
-        width: 80%;
+  &__logo{
+    margin: auto 0;
+  }
+
+  &__top-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+    @include tablet {
+      flex-direction: row;
     }
 
-    &__list{
-        display: flex;
-        gap: 2rem;
-    }
-
-    &__item{
-        background-color: #EB5E28;
-        color: white;
-        border-radius: 8px;
-        transition: .3s;
-        font-size: 1.5rem;
-        padding: .3rem .5rem;
-
-        &:hover{
-            background-color: white;
-            color: #EB5E28;
+    &--toggled{
+        display: none;
+    
+        @include tablet{
+            display: flex;
         }
     }
+  }
+
+  &__item {
+    @include tablet {
+      background-color: #eb5e28;
+      color: white;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      font-size: 1.2rem;
+      padding: 0.3rem 0.5rem;
+
+      &:hover {
+        background-color: white;
+        color: #eb5e28;
+      }
+    }
+  }
+
+}
+
+.hamburger {
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.hamburger > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 2px;
+  width: 60%;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 100%;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+  top: 10px;
+}
+
+#checked{
+    background: rgba(0,0,0,0);
+}
+
+#checked::before {
+  top: 0;
+  transform: rotate(45deg);
+  background: rgb(255, 255, 255);
+}
+
+#checked::after {
+  top: 0;
+  transform: rotate(135deg);
+  background: rgb(255, 255, 255);
 }

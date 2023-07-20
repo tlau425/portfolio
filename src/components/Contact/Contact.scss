@@ -16,11 +16,15 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  padding: 5rem 2rem;
+  padding: 1rem 2rem;
   margin-top: 2rem;
-  background-color: #313131;
-  width: 80%;
+  background-color: $box-color;
+  width: 100%;
   border-radius: 8px;
+
+  @include tablet{
+    width: 80%;
+  }
 
   &__label {
     color: white;
@@ -51,11 +55,16 @@
     height: 3rem;
   }
 
-  &__textarea{
-    padding-top: .5rem;
+  &__textarea {
+    padding-top: 0.5rem;
+  }
+
+  &__send{
+    margin-left: 0.5rem;
   }
 
   &__button {
+    position: relative;
     font-size: 1.5rem;
     margin-top: 1rem;
     border-radius: 8px;
@@ -70,5 +79,10 @@
       color: $bold-color;
       transition: 0.4s;
     }
+  }
+
+  &__icon {
+    object-fit: contain;
+    height: 8rem;
   }
 }
