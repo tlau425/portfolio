@@ -1,5 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
 .hero {
   display: flex;
   justify-content: center;
@@ -72,7 +73,58 @@
     }
   }
 
+}
 
+.social{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-color;
+  font-size: .8rem;
+  background-color: transparent;
+
+  &:hover{
+    color: $bold-color;
+  }
+
+  &__container{
+    display: flex;
+    gap: .5rem;
+  }
+
+  &__icon{
+    height: 4rem;
+    width: 4rem;
+
+    &:hover{
+      animation: shake .5s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+}
+
+
+@keyframes shake {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(5deg);
+  }
+
+  50% {
+      transform: rotate(0deg);
+  }
+
+  75% {
+      transform: rotate(-5deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
 }
 
 @keyframes morph {
