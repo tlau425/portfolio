@@ -1,6 +1,4 @@
 import FavIcon from "../../assets/images/favicon.ico";
-import ReactIcon from "../../assets/images/react.png";
-import GithubIcon from "../../assets/images/github.png";
 import WhichWayGif from "../../assets/images/whichway-gif.gif";
 import HackathonVid from "../../assets/images/hackathon.mp4";
 import "./Projects.scss";
@@ -16,7 +14,7 @@ function Projects() {
         <label for="proj1" id="slide1">
           <div className="project-card">
             <div className="project-card__image">
-              <img src={FavIcon} className="project-card__picture" />
+              <img src={FavIcon} className="project-card__picture" alt="mealbuddy" />
             </div>
 
             <div className="project-card__infos">
@@ -112,7 +110,7 @@ function Projects() {
         <label for="proj3" id="slide3">
           <div className="project-card">
             <div className="project-card__image">
-              <img className="project-card__picture" src={WhichWayGif} />
+              <img className="project-card__picture" src={WhichWayGif} alt="which way gif"/>
             </div>
 
             <div className="project-card__infos">
