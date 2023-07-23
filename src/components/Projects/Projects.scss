@@ -13,7 +13,7 @@
     width: 90%;
 
     @include tablet{
-        width: 80%;
+        width: 85%;
 
     }
 
@@ -30,15 +30,21 @@
     flex-direction: column;
 
     @include tablet{
+        gap: 1rem;
+    }
+
+    @include desktop{
         flex-direction: row;
         gap: 2rem;
     }
 
     &__image{
         display: flex;
+        background-color: black;
+        border-radius: 8px;
 
         @include tablet{
-            align-items: flex-start;
+            align-items: center;
         }
     }
 
@@ -53,19 +59,29 @@
 
     &__links{
         display: flex;
+
+        @include desktop{
+            align-items: flex-end;
+        }
     }
 
     &__image, &__infos{
         flex:1
     } 
 
+    &__infos{
+        display: flex;
+        flex-direction: column;
+    }
+
     &__picture{
         display: block;
         width: 100%;
         border-radius: 8px;
         object-fit: contain;
+        max-height: 20rem;
         @include tablet{
-
+            height: 100%;
         }
     }
 
@@ -99,6 +115,7 @@
     &__link{
         background-color: $bold-color;
         padding: .2rem;
+        height: 2rem;
         border-radius: 8px;
         width: 5rem;
         text-align: center;
@@ -112,6 +129,28 @@
         }
     }
 
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: flex-end;
+    }
+
+    &__stack{
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__tech{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    &__icon{
+        height: 3rem;
+        width: 3rem;
+    }
+
     ul{
         padding-left: 1rem;
     }
@@ -120,6 +159,7 @@
 
 video{
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 20rem;
     border-radius: 8px;
 }

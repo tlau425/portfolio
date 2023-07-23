@@ -8,8 +8,8 @@ function MainPage({ handleResumeClick }) {
   return (
     <div>
       <Hero handleResumeClick={handleResumeClick}/>
-      <Stack />
       <Projects />
+      <Stack />
       <About />
       <Contact />
     </div>
