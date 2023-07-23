@@ -58,7 +58,7 @@ function Contact() {
     <section className="contact" id="contact">
       <div className="section-title__container">
         <h3 className="section-title__sub">Get in touch</h3>
-        <h2 className="section-title">Contact.</h2>
+        <h2 className="section-title">Contact</h2>
       </div>
       <div className="contact-form__container">
         <img className="contact-form__icon" src={MailIcon} alt="mail" />

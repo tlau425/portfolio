@@ -7,7 +7,7 @@ function About() {
     <section className="about" id="about">
       <div className="section-title__container">
         <h3 className="section-title__sub">Get to know</h3>
-        <h2 className="section-title">About.</h2>
+        <h2 className="section-title">About</h2>
       </div>
       <div className="about-description">
         <div className="about-description__left">
@@ -24,7 +24,8 @@ function About() {
             completion, I was offered a role as a Full Stack Developer where I
             had to pleasure of teaching and mentoring prospering developers.
             <br></br>
-            <br></br>A hobby I recently picked up and absolutely enjoy is Rug
+            <br></br>
+            A hobby I recently picked up and absolutely enjoy is Rug
             Tufting. Still quite new, but I find it therapeutic and the creative
             space is limitless. Here are some of the random pieces I created.
           </p>

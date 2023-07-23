@@ -3,11 +3,9 @@ import "./Header.scss";
 import { ResumeModal } from "../ResumeModal/ResumeModal";
 
 function Header({handleResumeClick, toggleResume}) {
-  // const [toggleResume, setToggleResume] = useState(false);
   const [toggleHamburger, setToggleHamburger] = useState(false);
 
   const handleHamburgerClick = () => setToggleHamburger(!toggleHamburger);
-  // const handleResumeClick = () => setToggleResume(!toggleResume);
 
   //Sticky header on scroll up function
   const useScrollDirection = () => {
@@ -47,7 +45,7 @@ function Header({handleResumeClick, toggleResume}) {
       >
         <nav className="nav">
           <div className="nav__top-container">
-            <a href="#hero" className="nav__logo">
+            <a href="#hero" className="nav__logo nav__item">
               Tommy Lau
             </a>
             <div className="hamburger" onClick={handleHamburgerClick}>
