@@ -1,49 +1,100 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
 .stack {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem 0;
-
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    width: 90%;
+    
+    @include tablet{
+        width: 85%;
+    }
     &__icon {
         height: 4rem;
         width: 4rem;
         object-fit: contain;
     }
 
-    &__container {
-        background-color: white;
-        border-radius: 50%;
-        padding: 1rem;
+    &__container{
         display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    }
 
-        &:hover {
-            animation: shake .5s;
-            animation-iteration-count: infinite;
-            background-color: rgb(238, 238, 238);
+    &__card {
+        background-color: white;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover .stack__icon{
+            opacity: .3;
         }
+        &:hover .stack__overlay{
+            opacity: 1;
+        }
+    }
+
+    &__wrapper{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__overlay{
+        position: absolute;
+        opacity: 0;
+        font-weight: 700;
+        text-align:center;
+        vertical-align: center;
     }
 
 }
 
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
-    }
+.css{
+    background-image: url("../../assets/images/css.png");
+}
 
-    25% {
-        transform: rotate(5deg);
-    }
-
-    50% {
-        transform: rotate(0deg);
-    }
-
-    75% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+.js{
+    background-image: url("../../assets/images/javascript.png");
+}
+.html{
+    background-image: url("../../assets/images/html.png");
+}
+.react{
+    background-image: url("../../assets/images/react.png");
+}
+.node{
+    background-image: url("../../assets/images/node.png");
+}
+.express{
+    background-image: url("../../assets/images/express.png");
+}
+.mysql{
+    background-image: url("../../assets/images/mysql.png");
+}
+.rails{
+    background-image: url("../../assets/images/rails.png");
+}
+.ruby{
+    background-image: url("../../assets/images/ruby-icon.png");
+}
+.postgres{
+    background-image: url("../../assets/images/postgres.png");
+}
+.ts{
+    background-image: url("../../assets/images/typescript.svg");
+}
+.python{
+    background-image: url("../../assets/images/python.png");
+}
+.redux{
+    background-image: url("../../assets/images/redux.png");
 }

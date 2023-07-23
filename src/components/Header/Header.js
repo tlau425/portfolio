@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import "./Header.scss";
 import { ResumeModal } from "../ResumeModal/ResumeModal";
 
-function Header() {
-  const [toggleResume, setToggleResume] = useState(false);
+function Header({handleResumeClick, toggleResume}) {
+  const [toggleHamburger, setToggleHamburger] = useState(false);
 
-  const handleResumeClick = () => {
-    setToggleResume(!toggleResume);
-  };
+  const handleHamburgerClick = () => setToggleHamburger(!toggleHamburger);
 
   //Sticky header on scroll up function
   const useScrollDirection = () => {
@@ -46,24 +44,35 @@ function Header() {
         }`}
       >
         <nav className="nav">
-          <a href="#">Tommy Lau</a>
-          <ul className="nav__list">
-            <li>
+          <div className="nav__top-container">
+            <a href="#hero" className="nav__logo nav__item">
+              Tommy Lau
+            </a>
+            <div className="hamburger" onClick={handleHamburgerClick}>
+              <div id={toggleHamburger ? "checked" : ""}></div>
+            </div>
+          </div>
+          <ul
+            className={
+              toggleHamburger ? "nav__list" : "nav__list nav__list--toggled"
+            }
+          >
+            <li className="nav__li">
               <a href="#projects" className="nav__item">
                 Projects
               </a>
             </li>
-            <li>
+            <li className="nav__li">
               <a href="#about" className="nav__item">
                 About
               </a>
             </li>
-            <li>
+            <li className="nav__li">
               <a href="#contact" className="nav__item">
                 Contact
               </a>
             </li>
-            <li>
+            <li className="nav__li">
               <button
                 className="nav__item nav__button"
                 onClick={handleResumeClick}

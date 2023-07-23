@@ -1,19 +1,19 @@
-import { Hero } from '../components/Hero/Hero';
-import { Stack } from '../components/Stack/Stack';
-import { Projects } from '../components/Projects/Projects';
-import { Contact } from '../components/Contact/Contact';
-import { About } from '../components/About/About';
-import './MainPage.scss';
-function MainPage(){
-    return (
-        <div>
-            <Hero />
-            <Stack />
-            <Projects />
-            <About />
-            <Contact />
-        </div>
-    )
+import { Hero } from "../components/Hero/Hero";
+import { Stack } from "../components/Stack/Stack";
+import { Projects } from "../components/Projects/Projects";
+import { Contact } from "../components/Contact/Contact";
+import { About } from "../components/About/About";
+import "./MainPage.scss";
+function MainPage({ handleResumeClick }) {
+  return (
+    <div>
+      <Hero handleResumeClick={handleResumeClick}/>
+      <Projects />
+      <Stack />
+      <About />
+      <Contact />
+    </div>
+  );
 }
 
-export { MainPage }
+export { MainPage };
