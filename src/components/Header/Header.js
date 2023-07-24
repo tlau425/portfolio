@@ -41,7 +41,7 @@ function Header({handleResumeClick, toggleResume}) {
       <header
         className={`header ${
           useScrollDirection() === "down" ? "hide" : "show"
-        }`}
+        } ${toggleHamburger? "toggle-hamburger" : ""}`}
       >
         <nav className="nav">
           <div className="nav__top-container">

@@ -106,7 +106,6 @@ function Contact() {
             </label>
             <textarea
               className="contact-form__input contact-form__textarea"
-              rows="12"
               name="message"
               value={form.message}
               onChange={handleChange}

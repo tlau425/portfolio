@@ -24,94 +24,94 @@ function Stack() {
       <div className="stack__wrapper">
         <h3 className="project-card__title">Programming Languages</h3>
         <div className="stack__container">
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={CssIcon} alt="CSS" />
-            <p className="stack__overlay">CSS</p>
+            <p className="stack__overlay sb1">CSS</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={HtmlIcon} alt="HTML" />
-            <p className="stack__overlay">HTML</p>
+            <p className="stack__overlay sb1">HTML</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img
               className="stack__icon"
               src={JavascriptIcon}
               alt="Javascript"
             />
-            <p className="stack__overlay">Javascript</p>
+            <p className="stack__overlay sb1">Javascript</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={PythonIcon} alt="Python" />
-            <p className="stack__overlay">Python</p>
+            <p className="stack__overlay sb1">Python</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={RubyIcon} alt="Ruby" />
-            <p className="stack__overlay">Ruby</p>
+            <p className="stack__overlay sb1">Ruby</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img
               className="stack__icon"
               src={TypeScriptIcon}
               alt="TypeScript"
             />
-            <p className="stack__overlay">TypeScript</p>
+            <p className="stack__overlay sb1">TypeScript</p>
           </div>
         </div>
 
         <h3 className="project-card__title">Frameworks/Libraries</h3>
         <div className="stack__container">
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={ReactIcon} alt="React" />
-            <p className="stack__overlay">React</p>
+            <p className="stack__overlay sb1">React</p>
           </div>
 
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={NodeIcon} alt="Node" />
-            <p className="stack__overlay">Node.js</p>
+            <p className="stack__overlay sb1">Node.js</p>
           </div>
 
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={RailsIcon} alt="Ruby on Rails" />
-            <p className="stack__overlay">Ruby on Rails</p>
+            <p className="stack__overlay sb1">Ruby on Rails</p>
           </div>
 
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={ExpressIcon} alt="NodeExpress" />
-            <p className="stack__overlay">Node Express</p>
+            <p className="stack__overlay sb1">Node Express</p>
           </div>
 
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={ReduxIcon} alt="Redux" />
-            <p className="stack__overlay">Redux</p>
+            <p className="stack__overlay sb1">Redux</p>
           </div>
         </div>
 
         <h3 className="project-card__title">Databases</h3>
         <div className="stack__container">
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={MysqlIcon} alt="MySQL" />
-            <p className="stack__overlay">MySQL</p>
+            <p className="stack__overlay sb1">MySQL</p>
           </div>
 
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={PostgresIcon} alt="Postgres" />
-            <p className="stack__overlay">Postgres</p>
+            <p className="stack__overlay sb1">Postgres</p>
           </div>
         </div>
 
         <h3 className="project-card__title">Collaboration</h3>
         <div className="stack__container">
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={JiraIcon} alt="Jira" />
-            <p className="stack__overlay">Jira</p>
+            <p className="stack__overlay sb1">Jira</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={GitIcon} alt="Got" />
-            <p className="stack__overlay">Git</p>
+            <p className="stack__overlay sb1">Git</p>
           </div>
-          <div className="stack__card">
+          <div className="stack__card stack__card--boxshadow">
             <img className="stack__icon" src={SlackIcon} alt="Slack" />
-            <p className="stack__overlay">Slack</p>
+            <p className="stack__overlay sb1">Slack</p>
           </div>
         </div>
       </div>
