@@ -8,14 +8,18 @@
     align-items: flex-start;
     margin: auto;
     width: 90%;
-    
     @include tablet{
         width: 85%;
     }
+
     &__icon {
-        height: 4rem;
-        width: 4rem;
+        height: 3rem;
+        width: 3rem;
         object-fit: contain;
+        @include tablet{
+            height: 4rem;
+            width: 4rem;
+        }
     }
 
     &__container{
@@ -27,18 +31,30 @@
 
     &__card {
         background-color: white;
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 50%;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+
+        &--boxshadow{
+        box-shadow: 20px 20px 20px 5px rgb(22, 22, 22);
+        }
+
         &:hover .stack__icon{
             opacity: .3;
         }
         &:hover .stack__overlay{
-            opacity: 1;
+            display: block;
+            animation: fade_in_show 0.3s ease-out;
+        }
+
+        @include tablet{
+            width: 5rem;
+            height: 5rem;
         }
     }
 
@@ -49,52 +65,42 @@
     }
 
     &__overlay{
-        position: absolute;
-        opacity: 0;
+        display: none;
         font-weight: 700;
-        text-align:center;
-        vertical-align: center;
+        background: $hover-bubble;
+        font-weight: 600;
+        padding: 1rem;
+        border-radius: 10px;
+        z-index: 2;
+        position: absolute;
+        bottom: 60px;
+        left: 30px;
+        color: white;
     }
 
 }
 
-.css{
-    background-image: url("../../assets/images/css.png");
+.sb1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid $hover-bubble;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $hover-bubble;
+    border-bottom: 10px solid transparent;
+    left: 12px;
+    bottom: -13px;
 }
 
-.js{
-    background-image: url("../../assets/images/javascript.png");
-}
-.html{
-    background-image: url("../../assets/images/html.png");
-}
-.react{
-    background-image: url("../../assets/images/react.png");
-}
-.node{
-    background-image: url("../../assets/images/node.png");
-}
-.express{
-    background-image: url("../../assets/images/express.png");
-}
-.mysql{
-    background-image: url("../../assets/images/mysql.png");
-}
-.rails{
-    background-image: url("../../assets/images/rails.png");
-}
-.ruby{
-    background-image: url("../../assets/images/ruby-icon.png");
-}
-.postgres{
-    background-image: url("../../assets/images/postgres.png");
-}
-.ts{
-    background-image: url("../../assets/images/typescript.svg");
-}
-.python{
-    background-image: url("../../assets/images/python.png");
-}
-.redux{
-    background-image: url("../../assets/images/redux.png");
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
 }

@@ -2,6 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -9,16 +10,25 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
-  border-bottom: 1px solid $sub-bold;
   z-index: 3;
-  background-color: $background-color;
+  background-color: rgba(0,0,0, 1);
 
   @include tablet {
     height: 6rem;
   }
 }
-.header.hide {
-  top: -6rem;
+.hide {
+  top: -15rem;
+}
+
+.show{
+  width: 100%;
+}
+
+.toggle-hamburger{
+  @include only-mobile{
+  top: 0;
+  }
 }
 
 header li {
@@ -52,9 +62,12 @@ header li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: .8rem;
+    padding-bottom: 1rem;
 
     @include tablet {
+      padding-bottom: 0;
+      gap: 1rem;
       flex-direction: row;
     }
 
@@ -77,6 +90,7 @@ header li {
   &__item {
     &:hover {
       color: $bold-color;
+      border-bottom: 1px solid $text-color;
     }
     @include tablet {
       background-color: #eb5e28;
@@ -89,6 +103,7 @@ header li {
       &:hover {
         background-color: white;
         color: $bold-color;
+        border-bottom: none;
       }
     }
   }

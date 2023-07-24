@@ -1,165 +1,184 @@
 @use "../../styles/partials/mixins" as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/variables" as *;
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.projects{
-    padding: 3rem 0;
+.projects {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+
+  @include tablet {
+    width: 85%;
+  }
+
+  &__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 90%;
-
-    @include tablet{
-        width: 85%;
-
-    }
-
-    &__container{
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
+    gap: 3rem;
+  }
 }
 
-.project-card{
+.project-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    gap: 1rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__image {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    @include tablet{
-        gap: 1rem;
-    }
-
-    @include desktop{
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    &__image{
-        display: flex;
-        background-color: black;
-        border-radius: 8px;
-
-        @include tablet{
-            align-items: center;
-        }
-    }
-
-    &__icon{
-        height: 3rem;
-    }
-    
-    &__title{
-        color: $bold-color;
-        font-size: 1.5rem;
-    }
-
-    &__links{
-        display: flex;
-
-        @include desktop{
-            align-items: flex-end;
-        }
-    }
-
-    &__image, &__infos{
-        flex:1
-    } 
-
-    &__infos{
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__picture{
-        display: block;
-        width: 100%;
-        border-radius: 8px;
-        object-fit: contain;
-        max-height: 20rem;
-        @include tablet{
-            height: 100%;
-        }
-    }
-
-    &__bullet{
-        line-height: 1.5rem;
-        color: #CCC5B9;
-        opacity: 0;
-        animation: reveal 0.5s forwards;
-        animation-delay: 0.5s;
-
-        @keyframes reveal {
-            from { transofmr: translateY(20px);}
-            to{ opacity: 1; transform: none;}
-        }
-    }
-
-    &__description{
-        line-height: 1.5rem;
-        color: #FFFCF2;
-        font-size: 1.2rem;
-        font-weight: 500;
-        padding: .5rem 0;
-    }
-
-    &__links{
-        display: flex;
-        gap: .5rem;
-        padding-top: .5rem;
-    }
-
-    &__link{
-        background-color: $bold-color;
-        padding: .2rem;
-        height: 2rem;
-        border-radius: 8px;
-        width: 5rem;
-        text-align: center;
-
-
-        &:hover{
-            color: $bold-color;
-            background-color: white;
-            transition: .5s;
-
-        }
-    }
-
-    &__bottom{
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        align-items: flex-end;
-    }
-
-    &__stack{
-        display: flex;
-        gap: .5rem;
-    }
-
-    &__tech{
-        height: 3.5rem;
-        width: 3.5rem;
-    }
-
-    &__icon{
-        height: 3rem;
-        width: 3rem;
-    }
-
-    ul{
-        padding-left: 1rem;
-    }
-}
-
-
-video{
-    width: 100%;
-    height: 100%;
-    max-height: 20rem;
+    background-color: black;
     border-radius: 8px;
+
+    @include tablet {
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    height: 3rem;
+  }
+
+  &__title {
+    color: $bold-color;
+    font-size: 1.3rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    order: 2;
+
+    @include desktop {
+      align-items: flex-end;
+      order: 0;
+    }
+  }
+
+  &__image,
+  &__infos {
+    flex: 1;
+  }
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $text-color;
+
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+    max-height: 20rem;
+    @include tablet {
+      height: 100%;
+    }
+  }
+
+  &__bullet {
+    line-height: 1.5rem;
+    color: #ccc5b9;
+    opacity: 0;
+    animation: reveal 0.5s forwards;
+    animation-delay: 0.5s;
+
+    @keyframes reveal {
+      from {
+        transofmr: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+
+  &__description {
+    line-height: 1.5rem;
+    color: #fffcf2;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  &__link {
+    background-color: $bold-color;
+    padding: 0.2rem;
+    height: 2rem;
+    border-radius: 8px;
+    width: 5rem;
+    text-align: center;
+
+    &:hover {
+      color: $bold-color;
+      background-color: white;
+      transition: 0.5s;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.1rem;
+    height: 100%;
+    align-items: flex-end;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__stack {
+    display: flex;
+    gap: 0.5rem;
+    order: 1;
+  }
+
+  &__tech {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  max-height: 20rem;
+  border-radius: 8px;
 }
