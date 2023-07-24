@@ -182,3 +182,16 @@ video {
   max-height: 20rem;
   border-radius: 8px;
 }
+
+.sb2:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid $hover-bubble;
+    border-top: 10px solid $hover-bubble;
+    border-bottom: 10px solid transparent;
+    right: 0;
+    bottom: -13px;
+}
