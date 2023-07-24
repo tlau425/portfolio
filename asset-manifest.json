@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.13446073.css",
-    "main.js": "/portfolio/static/js/main.76863b35.js",
+    "main.css": "/portfolio/static/css/main.fabf11d7.css",
+    "main.js": "/portfolio/static/js/main.f7af9546.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/mealbuddy-demo.mp4": "/portfolio/static/media/mealbuddy-demo.44289fe0e0d1159e1b55.mp4",
     "static/media/tufting-rugs.jpg": "/portfolio/static/media/tufting-rugs.767e525dd162b7569141.jpg",
@@ -29,12 +29,12 @@
     "static/media/css.png": "/portfolio/static/media/css.a6654664098ab9c04b41.png",
     "static/media/typescript.svg": "/portfolio/static/media/typescript.9ad8e0ac203b898518715e3e910e5c82.svg",
     "index.html": "/portfolio/index.html",
-    "main.13446073.css.map": "/portfolio/static/css/main.13446073.css.map",
-    "main.76863b35.js.map": "/portfolio/static/js/main.76863b35.js.map",
+    "main.fabf11d7.css.map": "/portfolio/static/css/main.fabf11d7.css.map",
+    "main.f7af9546.js.map": "/portfolio/static/js/main.f7af9546.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13446073.css",
-    "static/js/main.76863b35.js"
+    "static/css/main.fabf11d7.css",
+    "static/js/main.f7af9546.js"
   ]
 }
