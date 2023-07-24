@@ -25,15 +25,18 @@ function About() {
             had to pleasure of teaching and mentoring prospering developers.
             <br></br>
             <br></br>
-            A hobby I recently picked up and absolutely enjoy is Rug
-            Tufting. Still quite new, but I find it therapeutic and the creative
-            space is limitless. Here are some of the random pieces I created.
           </p>
           <img
-            className="about-description__gif"
-            src={Tuft}
-            alt="tuft animation"
-          />
+              className="about-description__gif"
+              src={Tuft}
+              alt="tuft animation"
+            />
+          <p className="about-description__text">
+            When i'm not coding, I like to spend my time traveling. You can see a small glimpse in my profile picture of my favorite place to visit, Japan.
+            A hobby I recently picked up and absolutely enjoy is Rug Tufting.
+            Still quite new, but I find it therapeutic and the creative space is
+            limitless. These are some of the pieces I created.
+          </p>
         </div>
         <img
           className="about-description__pic"

@@ -83,7 +83,7 @@ function Projects() {
                       src={ReactIcon}
                       alt="React"
                     />
-                    <p className="stack__overlay">React</p>
+                    <p className="stack__overlay sb1">React</p>
                   </div>
                   <div className="stack__card project-card__tech">
                     <img
@@ -91,7 +91,7 @@ function Projects() {
                       src={NodeIcon}
                       alt="Node"
                     />
-                    <p className="stack__overlay">Node.js</p>
+                    <p className="stack__overlay sb1">Node.js</p>
                   </div>
                   <div className="stack__card project-card__tech">
                     <img
@@ -99,7 +99,7 @@ function Projects() {
                       src={ExpressIcon}
                       alt="NodeExpress"
                     />
-                    <p className="stack__overlay">Node Express</p>
+                    <p className="stack__overlay sb1">Node Express</p>
                   </div>
                   <div className="stack__card project-card__tech">
                     <img
@@ -107,7 +107,7 @@ function Projects() {
                       src={MysqlIcon}
                       alt="MySQL"
                     />
-                    <p className="stack__overlay">MySQL</p>
+                    <p className="stack__overlay sb1">MySQL</p>
                   </div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ function Projects() {
                     src={ReactIcon}
                     alt="React"
                   />
-                  <p className="stack__overlay">React</p>
+                  <p className="stack__overlay sb1">React</p>
                 </div>
               </div>
             </div>
@@ -219,7 +219,7 @@ function Projects() {
                     alt="Javascript"
                     project-card__icon
                   />
-                  <p className="stack__overlay">Javascript</p>
+                  <p className="stack__overlay sb1">Javascript</p>
                 </div>
                 <div className="stack__card project-card__tech">
                   <img
@@ -227,7 +227,7 @@ function Projects() {
                     src={RubyIcon}
                     alt="Ruby"
                   />
-                  <p className="stack__overlay">Ruby</p>
+                  <p className="stack__overlay sb1">Ruby</p>
                 </div>
                 <div className="stack__card project-card__tech">
                   <img
@@ -235,7 +235,7 @@ function Projects() {
                     src={RailsIcon}
                     alt="Ruby on Rails"
                   />
-                  <p className="stack__overlay">Ruby on Rails</p>
+                  <p className="stack__overlay sb1">Ruby on Rails</p>
                 </div>
                 <div className="stack__card project-card__tech">
                   <img
@@ -243,7 +243,7 @@ function Projects() {
                     src={PostgresIcon}
                     alt="Postgres"
                   />
-                  <p className="stack__overlay">Postgres</p>
+                  <p className="stack__overlay sb1">Postgres</p>
                 </div>
               </div>
             </div>
