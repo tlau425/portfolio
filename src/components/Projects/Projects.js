@@ -69,12 +69,6 @@ function Projects() {
                   >
                     GitHub
                   </a>
-                  <a
-                    className="project-card__link"
-                    href="https://github.com/tlau425/meal-buddy-client"
-                  >
-                    Live
-                  </a>
                 </div>
                 <div className="project-card__stack">
                   <div className="stack__card project-card__tech">
